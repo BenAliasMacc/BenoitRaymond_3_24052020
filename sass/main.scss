@@ -15,22 +15,32 @@ body
     font-family: "roboto", Arial, sans-serif;
     font-size: 1rem;
 }
-.container
-{
-    margin: 0 0.5rem;
-}
 a
 {
     text-decoration: none;
 }
 
 /* HEADER */
-header
-{
-    border-bottom: 2px #cecece solid;
-    box-shadow: 0px 4px 4px #cecece;
-}
 #logo
 {
     text-align: center;
+}
+
+/* SECTION 1 */
+.localisation
+{
+    border-top: 2px #cecece solid;
+    box-shadow: inset 0px 1px 5px #cecece;
+    background-color: #eaeaea;
+    padding: 1.2rem 0rem;
+    font-weight: bold;
+    &__contenu
+    {
+        display: flex;
+        justify-content: center;
+        .fa-map-marker-alt
+        {
+            margin-right: 1rem;
+        }
+    }
 }
