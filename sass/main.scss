@@ -15,6 +15,10 @@ body
     font-family: "roboto", Arial, sans-serif;
     font-size: 1rem;
 }
+h2
+{
+    font-size: 1.5rem;
+}
 a
 {
     text-decoration: none;
@@ -41,6 +45,22 @@ a
         .fa-map-marker-alt
         {
             margin-right: 1rem;
+        }
+    }
+}
+
+/* SECTION 2 */
+.explorer
+{
+    display: flex;
+    background-color: #f6f6f6;
+    text-align: center;
+    &__contenu
+    {
+        margin: 2.8rem 4rem 2.4rem 4rem;
+        h2, p
+        {
+            margin-bottom: 1rem;
         }
     }
 }
