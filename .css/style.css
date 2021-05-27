@@ -8,10 +8,7 @@
 }
 
 body {
-  max-width: 1440px;
-  min-width: 320px;
   font-family: "roboto", Arial, sans-serif;
-  font-size: 1rem;
 }
 
 h2 {
@@ -49,9 +46,10 @@ a {
   justify-content: center;
   text-align: center;
   background-color: #f6f6f6;
+  margin-bottom: 3.1rem;
 }
 .explorer__contenu {
-  margin: 2.8rem 4rem 2.4rem 4rem;
+  margin: 2.8rem 4rem 3.75rem 4rem;
 }
 .explorer__contenu h2, .explorer__contenu p {
   margin-bottom: 1rem;
@@ -61,9 +59,11 @@ a {
   height: 3rem;
   width: 13.4rem;
   margin: auto;
-  background: linear-gradient(#ef92df, #a75ddc);
+  background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 1.5rem;
   box-shadow: 0px 5px 8px #0000002e;
+  transform: scale(1);
+  transition: transform 600ms ease-in-out;
 }
 .bouton-explorer a {
   color: white;
@@ -76,6 +76,11 @@ a {
   align-items: center;
   height: 100%;
   width: 100%;
+}
+.bouton-explorer:hover {
+  background: linear-gradient(#ff88de, #9b63df);
+  box-shadow: 0px 6px 6px #0000002e;
+  transform: scale(1.15, 0.6);
 }
 
 /*# sourceMappingURL=style.css.map */

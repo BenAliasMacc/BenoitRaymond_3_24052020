@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import "./utils/variables";
+@import "./components/composants";
 /* GENERAL */
 * 
 {
@@ -10,10 +11,7 @@
 }  
 body
 {
-    max-width: 1440px;
-    min-width: 320px;
     font-family: "roboto", Arial, sans-serif;
-    font-size: 1rem;
 }
 h2
 {
@@ -50,41 +48,24 @@ a
 }
 
 /* SECTION 2 */
-.explorer
+.explorer 
 {
     display: flex;
     justify-content: center;
     text-align: center;
     background-color: #f6f6f6;
-    &__contenu
+    margin-bottom: 3.1rem;
+    &__contenu 
     {
-        margin: 2.8rem 4rem 2.4rem 4rem;
+        margin: 2.8rem 4rem 3.75rem 4rem;
         h2, p
         {
             margin-bottom: 1rem;
         }
+    
     }
 }
 .bouton-explorer
 {
-    height: 3rem;
-    width: 13.4rem;
-    margin: auto;
-    background: linear-gradient(#ef92df, #a75ddc);
-    border-radius: 1.5rem;
-    box-shadow: 0px 5px 8px #0000002e;
-    a
-    {
-        color: white;
-        height: 100%;
-        width: 100%;
-    }
-    p 
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-    }
+    @include bouton;
 }
