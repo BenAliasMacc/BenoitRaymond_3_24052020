@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}  
+}
 body
 {
     font-family: "roboto", Arial, sans-serif;
@@ -53,7 +53,7 @@ a
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: #f6f6f6;
+    background-color: $background-color;
     margin-bottom: 3.1rem;
     &__contenu 
     {
@@ -68,4 +68,57 @@ a
 .bouton-explorer
 {
     @include bouton;
+}
+
+/* SECTION 3 */
+.fonctionnement
+{
+    margin : 0rem 1rem 4rem 1.70rem; //1.70rem à gauche pour combler le décalage de 0.70rem vers la gauche du span
+    h2
+    {
+        margin-left: -0.70rem; // 1.70rem - 0.70rem = 1rem
+        margin-bottom: 2.5rem;
+    }
+    &__etapes
+    {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 4.4rem;
+        background-color: $background-color;
+        border-radius: 20px;
+        box-shadow: 0px 5px 8px #0000002e;
+        margin-bottom: 1rem;
+        i
+        {
+            color: #7e7e7e;
+            margin:auto 1rem auto 0.30rem;
+        }
+        span 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            width : 1.4rem;
+            height: 1.4rem;
+            border-radius: 100%;
+            background-color: $primary-color;
+            position: relative;
+            left: -0.70rem; //
+            
+        }
+        p
+        {
+            font-weight: bold;
+        }
+        &:hover
+        {
+            background-color: #f5edff;
+            i 
+            {
+                color: $primary-color;
+            }
+        }
+    }
 }
