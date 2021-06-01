@@ -98,6 +98,7 @@ a
         {
             color: #7e7e7e;
             margin:auto 1rem auto 0.30rem;
+            width: 20px;
         }
         span 
         {
@@ -191,9 +192,50 @@ a
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        color: blue;
         font-size: 1.5rem;
         margin: 1.5rem;
+        /*i
+        {
+            background: white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px black;
+            transition: background 10s;
+            &:hover
+            {
+                background: linear-gradient($primary-color,$secondary-color);
+                -webkit-background-clip: text;
+                -webkit-text-stroke: 1px transparent;
+            }
+        }*/
+        /*.fas.fa-heart
+        {
+            background: linear-gradient($primary-color,$secondary-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px black;
+            // transform : scale avec 1 second coeur   2nd coeur far fa-heart / placer les 2 coeurs l'un au dessous de l'autre / coeur plein en arrière plan, coeur vide en 1er plan
+            // hover, 2nd coeur qui apparait avec scale 1. 
+            transition: transform 5s 50ms ease-in-out;
+            cursor: pointer;
+        }
+        .far.fa-heart
+        {
+            position: absolute;
+            cursor: pointer;
+        }
+        .far.fa-heart:hover + .fas.fa-heart
+        {
+            transform: scale(1);
+        }
+        .far.fa-heart:hover 
+        {
+            color: transparent;
+        }*/
+        .far.fa-heart
+        {
+            
+        }
     }
     &__body
     {
