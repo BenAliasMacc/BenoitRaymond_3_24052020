@@ -26,11 +26,18 @@ a
 {
     text-decoration: none;
 }
-
 /* HEADER */
-#logo
+.fa-arrow-left
+{
+    position: relative;
+    top: 41.5px;
+    margin-left: 1rem;
+    font-size: 1.3rem;
+}
+    .logo 
 {
     text-align: center;
+    padding: 1rem 0rem 0.5rem 0rem;
 }
 
 /* SECTION 1 */
@@ -157,7 +164,6 @@ a
         justify-content: flex-end;
         grid-column: span 2;
         grid-row: 1;
-        object-fit: cover;
         width : 100%;
         max-height : 170px;
         background-size: cover;
@@ -183,7 +189,7 @@ a
     {
         .#{$i}
         {
-                background-image: url(../assets/images/boucle/#{$i}.jpg);
+                background-image: url(../assets/images/restaurants/#{$i}.jpg);
         }
     }
     &__heart
@@ -194,7 +200,7 @@ a
         align-items: center;
         font-size: 1.5rem;
         margin: 1.5rem;
-        /*i
+        i
         {
             background: white;
             -webkit-background-clip: text;
@@ -206,36 +212,43 @@ a
                 background: linear-gradient($primary-color,$secondary-color);
                 -webkit-background-clip: text;
                 -webkit-text-stroke: 1px transparent;
+                animation: apparition 1000ms;
             }
-        }*/
+        }
+        @keyframes apparition 
+        {
+            from 
+            {
+                opacity: 0%;
+            }
+            to {
+                opacity: 100%;
+            }
+        }
         /*.fas.fa-heart
         {
             background: linear-gradient($primary-color,$secondary-color);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            -webkit-text-stroke: 1px black;
-            // transform : scale avec 1 second coeur   2nd coeur far fa-heart / placer les 2 coeurs l'un au dessous de l'autre / coeur plein en arrière plan, coeur vide en 1er plan
-            // hover, 2nd coeur qui apparait avec scale 1. 
-            transition: transform 5s 50ms ease-in-out;
-            cursor: pointer;
-        }
-        .far.fa-heart
-        {
-            position: absolute;
+            transform: scale(0);
+            transition: transform 500ms ease-in-out;
             cursor: pointer;
         }
         .far.fa-heart:hover + .fas.fa-heart
         {
             transform: scale(1);
         }
-        .far.fa-heart:hover 
-        {
-            color: transparent;
-        }*/
         .far.fa-heart
         {
-            
-        }
+            position: absolute;
+            color: black;
+            transform-origin: bottom;
+            transition: all 0ms 500ms ease-in-out;
+            &:hover
+            {
+                color: transparent;
+            }
+        }*/
     }
     &__body
     {
@@ -280,4 +293,16 @@ footer
 {
     font-size: 0.70rem;
     width: 13px;
+}
+
+/*---------------------------------------------------
+-------------------PAGE 2------------------------
+-------------------------------------------------------*/
+
+/* SECTION 1 */
+.illustration
+{
+    background-image: url(../assets/images/restaurants/img-1.jpg);
+    height: 16.9rem;
+    background-size: cover;
 }
