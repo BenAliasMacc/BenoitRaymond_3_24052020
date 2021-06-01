@@ -25,8 +25,16 @@ a {
 }
 
 /* HEADER */
-#logo {
+.fa-arrow-left {
+  position: relative;
+  top: 41.5px;
+  margin-left: 1rem;
+  font-size: 1.3rem;
+}
+
+.logo {
   text-align: center;
+  padding: 1rem 0rem 0.5rem 0rem;
 }
 
 /* SECTION 1 */
@@ -160,7 +168,6 @@ a {
   justify-content: flex-end;
   grid-column: span 2;
   grid-row: 1;
-  object-fit: cover;
   width: 100%;
   max-height: 170px;
   background-size: cover;
@@ -182,16 +189,16 @@ a {
   right: 0.5rem;
 }
 .card .img-1 {
-  background-image: url(../assets/images/boucle/img-1.jpg);
+  background-image: url(../assets/images/restaurants/img-1.jpg);
 }
 .card .img-2 {
-  background-image: url(../assets/images/boucle/img-2.jpg);
+  background-image: url(../assets/images/restaurants/img-2.jpg);
 }
 .card .img-3 {
-  background-image: url(../assets/images/boucle/img-3.jpg);
+  background-image: url(../assets/images/restaurants/img-3.jpg);
 }
 .card .img-4 {
-  background-image: url(../assets/images/boucle/img-4.jpg);
+  background-image: url(../assets/images/restaurants/img-4.jpg);
 }
 .card__heart {
   grid-column: 2;
@@ -286,5 +293,9 @@ footer ul li {
   font-size: 0.7rem;
   width: 13px;
 }
+
+/*---------------------------------------
+---------------------PAGE 2----------------
+---------------------------------------------*/
 
 /*# sourceMappingURL=style.css.map */
