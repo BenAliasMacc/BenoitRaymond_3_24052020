@@ -1,3 +1,4 @@
+/* Bouton */
 @mixin bouton 
 {
     height: 3rem;
@@ -28,4 +29,31 @@
         box-shadow: 0px 6px 6px #0000002e;
         transform: scale(1.15, 0.6);
     }
+}
+
+/* Coeur + Animation */
+@mixin heart 
+{
+    i
+        {
+            background: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px black;
+            &:hover
+            {
+                background: linear-gradient($primary-color,$secondary-color);
+                -webkit-background-clip: text;
+                -webkit-text-stroke: 1px transparent;
+                animation: apparition 1s;
+            }
+        }
+        @keyframes apparition {
+            from {
+                opacity: 0%;
+            }
+            to {
+                opacity: 100%;
+            }
+        }
 }
