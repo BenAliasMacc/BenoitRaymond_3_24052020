@@ -345,27 +345,57 @@ footer
             border-bottom: solid #99e2d0 3px;
         }
     }
-    &__plat
+    &__card
     {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4.4rem;
         background-color: white;
         border-radius: 25px;
         box-shadow: $box-shadow;
         margin: 0rem 1rem 1rem 1rem;
+    }
+    &__plat
+    {
+        width: 100%;
         &--name
         {
-            padding: 1rem 0rem 0rem 1rem;
+            padding-left:  1rem;
         }
         &--details
         {
             display: flex;
             justify-content: space-between;
-            padding: 0rem 1rem 1rem 1rem;
+            padding: 0rem 1rem;
+            p
+            {
+                margin-right: 1rem;
+                overflow: hidden;
+            }
         }
         &--check
         {
-            height: 3rem;
-            width: 2rem;
-            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 0rem;
+            background-color: #99e2d0;
+            border-radius: 0px 25px 25px 0px;
+            transform: scale(0,1);
+            transform-origin: right;
+            transition: all 1s;
+            .fa-check-circle
+            {
+                font-size: 1.5rem;
+                color: white;
+            }
+        }
+        &:hover + .menu__plat--check
+        {
+            width: 4.5rem;
+            transform: scale(1);
         }
     }
 }
