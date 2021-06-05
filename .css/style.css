@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@keyframes check-slide {
+@keyframes animation-menu {
   from {
     opacity: 0;
   }
@@ -41,7 +41,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 h5 {
@@ -103,30 +103,29 @@ header {
 .explorer__contenu h3, .explorer__contenu p {
   margin-bottom: 1rem;
 }
-
-.bouton-explorer {
+.explorer__contenu__bouton {
   height: 3rem;
   width: 13.4rem;
   margin: auto;
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 1.5rem;
-  box-shadow: 0px 5px 8px #0000002e;
+  box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
   transform: scale(1);
   transition: transform 600ms ease-in-out;
 }
-.bouton-explorer a {
+.explorer__contenu__bouton a {
   color: white;
   height: 100%;
   width: 100%;
 }
-.bouton-explorer p {
+.explorer__contenu__bouton p {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
 }
-.bouton-explorer:hover {
+.explorer__contenu__bouton:hover {
   background: linear-gradient(#ff88de, #9b63df);
   box-shadow: 0px 6px 6px #0000002e;
   transform: scale(1.15, 0.6);
@@ -147,7 +146,7 @@ header {
   height: 4.4rem;
   background-color: #f6f6f6;
   border-radius: 20px;
-  box-shadow: 0px 5px 8px #0000002e;
+  box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
   margin-bottom: 1rem;
 }
 .fonctionnement__etapes i {
@@ -181,12 +180,11 @@ header {
 .restaurants {
   background-color: #f6f6f6;
 }
-
-.restaurants-contenu {
+.restaurants__contenu {
   margin: 0rem 1rem 0rem 1rem;
   padding: 3.75rem 0rem 3.75rem 0rem;
 }
-.restaurants-contenu h3 {
+.restaurants__contenu h3 {
   margin-bottom: 2rem;
 }
 
@@ -197,7 +195,7 @@ header {
   margin-bottom: 1rem;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 0px 5px 8px #0000002e;
+  box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
 }
 .card__image {
   display: flex;
@@ -209,7 +207,7 @@ header {
   background-size: cover;
   border-radius: 15px 15px 0px 0px;
 }
-.card__image--nouveau {
+.card__image__nouveau {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,7 +324,7 @@ footer ul li a {
   background-color: #f6f6f6;
   font-size: 1.25rem;
   border-radius: 35px 35px 0px 0px;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 2rem 1rem 0rem 1rem;
 }
 .illustration__title i {
   background: transparent;
@@ -350,65 +348,65 @@ footer ul li a {
 }
 
 /* SECTION 2 */
-.menu h5 {
+.menu__title {
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
-.menu h5 span {
+.menu__title span {
   border-bottom: solid #99e2d0 3px;
 }
 .menu__card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4.4rem;
+  height: 4rem;
   background-color: white;
-  border-radius: 25px;
-  box-shadow: 0px 5px 8px #0000002e;
+  border-radius: 15px;
+  box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
   margin: 0rem 1rem 1rem 1rem;
+  animation: animation-menu 1s ease-in-out 400ms top;
 }
-.menu__plat {
+.menu__card:hover .menu__card__body {
+  width: 80%;
+}
+.menu__card:hover .menu__card__body + .menu__card__body__animation-check {
+  width: 20%;
+  transform: scale(1);
+}
+.menu__card__body {
   width: 100%;
-  /*transition: all 1s;*/
+  transition: all 1s;
 }
-.menu__plat--name {
+.menu__card__body__title {
   padding-left: 1rem;
 }
-.menu__plat--details {
+.menu__card__body__description {
   display: flex;
   justify-content: space-between;
   padding: 0rem 1rem;
 }
-.menu__plat--details p {
+.menu__card__body__description p {
   margin-right: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menu__plat--check {
+.menu__card__body__animation-check {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 0%;
   background-color: #99e2d0;
-  border-radius: 0px 25px 25px 0px;
+  border-radius: 0px 15px 15px 0px;
   overflow: hidden;
   transform: scale(0, 1);
   transform-origin: right;
-  /*transition: all 1s;*/
+  transition: all 1s;
 }
-.menu__plat--check .fa-check-circle {
+.menu__card__body__animation-check .fa-check-circle {
   font-size: 1.5rem;
   color: white;
-}
-.menu__plat:hover {
-  width: 80%;
-  animation: check-slide 1s ease-in-out;
-}
-.menu__plat:hover + .menu__plat--check {
-  width: 20%;
-  transform: scale(1);
-  animation: check-slide 1s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

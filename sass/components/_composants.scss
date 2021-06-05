@@ -49,10 +49,12 @@
             }
         }
         @keyframes apparition {
-            from {
+            from 
+            {
                 opacity: 0%;
             }
-            to {
+            to 
+            {
                 opacity: 100%;
             }
         }
