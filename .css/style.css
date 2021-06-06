@@ -3,11 +3,50 @@
 @keyframes animation-menu {
   from {
     opacity: 0;
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
+/* Boucle animation menus */
+.card-1 {
+  animation: animation-menu 2s ease-in-out both 300ms;
+}
+
+.card-2 {
+  animation: animation-menu 2s ease-in-out both 600ms;
+}
+
+.card-3 {
+  animation: animation-menu 2s ease-in-out both 900ms;
+}
+
+.card-4 {
+  animation: animation-menu 2s ease-in-out both 1200ms;
+}
+
+.card-5 {
+  animation: animation-menu 2s ease-in-out both 1500ms;
+}
+
+.card-6 {
+  animation: animation-menu 2s ease-in-out both 1800ms;
+}
+
+.card-7 {
+  animation: animation-menu 2s ease-in-out both 2100ms;
+}
+
+.card-8 {
+  animation: animation-menu 2s ease-in-out both 2400ms;
+}
+
+.card-9 {
+  animation: animation-menu 2s ease-in-out both 2700ms;
+}
+
 /* Bouton */
 /* Coeur + Animation */
 /* GENERAL */
@@ -363,8 +402,8 @@ footer ul li a {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
   margin: 0rem 1rem 1rem 1rem;
-  animation: animation-menu 1s ease-in-out 400ms top;
 }
 .menu__card:hover .menu__card__body {
   width: 80%;
@@ -399,7 +438,6 @@ footer ul li a {
   width: 0%;
   background-color: #99e2d0;
   border-radius: 0px 15px 15px 0px;
-  overflow: hidden;
   transform: scale(0, 1);
   transform-origin: right;
   transition: all 1s;

@@ -355,8 +355,8 @@ footer
         background-color: white;
         border-radius: 15px;
         box-shadow: $box-shadow;
+        overflow: hidden;
         margin: 0rem 1rem 1rem 1rem;
-        animation: animation-menu 1s ease-in-out 400ms top;
         &:hover
         {
             .menu__card__body
@@ -399,7 +399,6 @@ footer
                 width: 0%;
                 background-color: #99e2d0;
                 border-radius: 0px 15px 15px 0px;
-                overflow: hidden;
                 transform: scale(0,1);
                 transform-origin: right;
                 transition: all 1s;

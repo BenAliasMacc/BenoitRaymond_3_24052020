@@ -3,10 +3,20 @@
     from 
     {
         opacity: 0;
-        
+        transform: translateY(50px)
     }
     to 
     {
         opacity: 1;
+        transform:translateY(0)
+    }
+}
+
+/* Boucle animation menus */
+@for $i from 1 through 9
+{
+    .card-#{$i}
+    {
+        animation: animation-menu 2s ease-in-out both #{$i*300}ms;
     }
 }
