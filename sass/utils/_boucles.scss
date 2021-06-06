@@ -1,0 +1,8 @@
+/* Intégration des backgrounds images */
+@each $i in $background-images
+{
+    .#{$i}
+    {
+            background-image: url(../assets/images/restaurants/#{$i}.jpg);
+    }
+}

@@ -13,10 +13,10 @@
 }
 
 /* Boucle animation menus */
-@for $i from 1 through 9
+@for $i from 1 through 10
 {
     .card-#{$i}
     {
-        animation: animation-menu 2s ease-in-out both #{$i*300}ms;
+        animation: animation-menu 2s ease-in-out both #{$i*200}ms;
     }
 }

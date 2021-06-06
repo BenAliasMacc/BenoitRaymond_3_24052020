@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import "./utils/variables";
 @import "./utils/keyframes";
+@import "./utils/boucles";
 @import "./components/composants";
 /* GENERAL */
 * 
@@ -211,13 +212,6 @@ header
             right: 0.5rem;
         }
     }
-    @each $i in $background-images
-    {
-        .#{$i}
-        {
-                background-image: url(../assets/images/restaurants/#{$i}.jpg);
-        }
-    }
     &__heart
     {
         grid-column: 2;
@@ -318,7 +312,6 @@ footer
 {
     display: flex;
     align-items: flex-end;
-    background-image: url(../assets/images/restaurants/img-1.jpg);
     background-size: cover;
     height: 18.75rem;
     &__title
@@ -334,6 +327,13 @@ footer
         @include heart
     }
 }
+@each $i in $background-images
+    {
+        .#{$i}
+        {
+                background-image: url(../assets/images/restaurants/#{$i}.jpg);
+        }
+    }
 /* SECTION 2 */
 .menu
 {
@@ -409,5 +409,16 @@ footer
                 }
             }
         }
+    }
+}
+
+/* SECTION 3 */
+.order
+{
+    margin-top: 2.5rem;
+    margin-bottom: 3.5rem;
+    &__button
+    {
+        @include bouton;
     }
 }
