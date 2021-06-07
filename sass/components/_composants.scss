@@ -60,4 +60,17 @@
         }
 }
 
-/* Loader */
+/* animation post chargement */
+@keyframes content-animation
+{
+    from 
+    {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    to 
+    {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
