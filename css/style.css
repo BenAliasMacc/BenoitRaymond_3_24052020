@@ -109,7 +109,7 @@ body {
   height: 0;
   text-align: center;
   color: white;
-  font-size: 10vw;
+  font-size: 1.5rem;
   animation: loader-spinner 1s ease-in-out infinite both;
 }
 
