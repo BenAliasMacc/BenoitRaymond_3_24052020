@@ -13,29 +13,32 @@
 }
 body
 {
+    max-width: 1500px;
     font-family: "roboto", Arial, sans-serif;
     font-size: 1rem;
+    margin: auto;
 }
-.index
+.loader-spinner
 {
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    font-size: 2rem;
     background: $degraded-color;
+    animation: loader 4s ease-in-out both;
 }
 .index-content
 {
     background-color: white;
     animation: content-animation 1s ease-in-out 3s both;
 }
-.loader-spinner
-{
-    position:sticky;
-    top: 50%;
-    height: 0;
-    text-align: center;
-    color: white;
-    font-size: 1.5rem;
-    animation: loader-spinner 1s ease-in-out infinite both;
-}
-.background-menu // background à appliquer sur les menus uniquement
+.wrapper // background à appliquer sur les menus uniquement
 {
     background-color: $background-color;
 }
@@ -342,10 +345,16 @@ footer
         {
             display: flex;
             justify-content: space-around;
+            white-space: nowrap;
         }
         li
         {
             margin-bottom: 0.50rem;
+            @media (min-width: 768px)
+            {
+                width: 25%;
+                text-align: center;
+            }
             a 
             {
             color: white;
@@ -437,7 +446,8 @@ footer
         box-shadow: $box-shadow;
         overflow: hidden;
         margin: 0rem 1rem 1rem 1rem;
-        &:hover
+        cursor: pointer;
+        &:active
         {
             .menu__card__body
             {
@@ -446,6 +456,21 @@ footer
                 {
                     width: 20%;
                     transform: scale(1);
+                }
+            }
+        }
+        @media (min-width: 768px)
+        {
+            &:hover
+            {
+                .menu__card__body
+                {
+                width: 80%;
+                    + .menu__card__body__animation-check
+                    {
+                        width: 20%;
+                        transform: scale(1);
+                    }
                 }
             }
         }

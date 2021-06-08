@@ -52,6 +52,15 @@
   animation: animation-menu 2s ease-in-out both 2000ms;
 }
 
+/* backgroung + animation loader-spinner */
+@keyframes loader {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 /* Intégration des backgrounds images */
 .img-1 {
   background-image: url(../assets/images/restaurants/img-1.jpg);
@@ -90,12 +99,25 @@
 }
 
 body {
+  max-width: 1500px;
   font-family: "roboto", Arial, sans-serif;
   font-size: 1rem;
+  margin: auto;
 }
 
-.index {
+.loader-spinner {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  font-size: 2rem;
   background: linear-gradient(#FF79DA, #9356DC);
+  animation: loader 4s ease-in-out both;
 }
 
 .index-content {
@@ -103,17 +125,7 @@ body {
   animation: content-animation 1s ease-in-out 3s both;
 }
 
-.loader-spinner {
-  position: sticky;
-  top: 50%;
-  height: 0;
-  text-align: center;
-  color: white;
-  font-size: 1.5rem;
-  animation: loader-spinner 1s ease-in-out infinite both;
-}
-
-.background-menu {
+.wrapper {
   background-color: #f6f6f6;
 }
 
@@ -201,8 +213,8 @@ header {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 1.5rem;
   box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
-  transform: scale(1);
-  transition: transform 600ms ease-in-out;
+  transform: scale(0.8);
+  transition: all 400ms ease-in-out;
 }
 .explorer__contenu__bouton a {
   color: white;
@@ -219,7 +231,7 @@ header {
 .explorer__contenu__bouton:hover {
   background: linear-gradient(#ff88de, #9b63df);
   box-shadow: 0px 6px 6px #0000002e;
-  transform: scale(1.15, 0.6);
+  transform: scale(1);
 }
 
 /* SECTION 3 */
@@ -405,10 +417,17 @@ footer ul {
   footer ul {
     display: flex;
     justify-content: space-around;
+    white-space: nowrap;
   }
 }
 footer ul li {
   margin-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+  footer ul li {
+    width: 25%;
+    text-align: center;
+  }
 }
 footer ul li a {
   color: white;
@@ -502,13 +521,23 @@ footer ul li a {
   box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   margin: 0rem 1rem 1rem 1rem;
+  cursor: pointer;
 }
-.menu__card:hover .menu__card__body {
+.menu__card:active .menu__card__body {
   width: 80%;
 }
-.menu__card:hover .menu__card__body + .menu__card__body__animation-check {
+.menu__card:active .menu__card__body + .menu__card__body__animation-check {
   width: 20%;
   transform: scale(1);
+}
+@media (min-width: 768px) {
+  .menu__card:hover .menu__card__body {
+    width: 80%;
+  }
+  .menu__card:hover .menu__card__body + .menu__card__body__animation-check {
+    width: 20%;
+    transform: scale(1);
+  }
 }
 .menu__card__body {
   width: 100%;
@@ -557,8 +586,8 @@ footer ul li a {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 1.5rem;
   box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
-  transform: scale(1);
-  transition: transform 600ms ease-in-out;
+  transform: scale(0.8);
+  transition: all 400ms ease-in-out;
 }
 .order__button a {
   color: white;
@@ -575,7 +604,7 @@ footer ul li a {
 .order__button:hover {
   background: linear-gradient(#ff88de, #9b63df);
   box-shadow: 0px 6px 6px #0000002e;
-  transform: scale(1.15, 0.6);
+  transform: scale(1);
 }
 
 /*# sourceMappingURL=style.css.map */

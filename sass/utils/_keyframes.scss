@@ -20,3 +20,15 @@
         animation: animation-menu 2s ease-in-out both #{$i*200}ms;
     }
 }
+/* backgroung + animation loader-spinner */
+@keyframes loader
+{
+    from 
+    {
+        opacity: 1;
+    }
+    to 
+    {
+        opacity: 0;
+    }
+}
