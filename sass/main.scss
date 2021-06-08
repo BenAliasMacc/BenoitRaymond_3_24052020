@@ -20,18 +20,22 @@ body
 }
 .loader-spinner
 {
+    
     position:fixed;
-    top: 0;
-    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 1500px;
     height: 100vh;
     width: 100vw;
     color: white;
     font-size: 2rem;
     background: $degraded-color;
     animation: loader 4s ease-in-out both;
+    .fa-spinner
+    {
+        animation: loader-spinner 1s ease-in-out 4 both;
+    }
 }
 .index-content
 {
@@ -65,7 +69,7 @@ h5
     font-size: 1.25rem;
     font-weight: normal;
     text-transform: uppercase;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 }
 a
 {
@@ -76,12 +80,14 @@ a
 header
 {
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .fa-arrow-left
 {
     position: relative;
-    top: 41.5px;
-    margin-left: 1rem;
+    right: 2rem;
     font-size: 1.3rem;
 }
     .logo 
@@ -380,16 +386,28 @@ footer
     background-size: cover;
     background-position: center;
     height: 18.75rem;
-    &__title
+    &__container
     {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         background-color: $background-color;
         font-size: 1.25rem;
         border-radius: 35px 35px 0px 0px;
         padding: 2rem 1rem 0rem 1rem;
+        @media (min-width: 768px)
+        {
+            display: flex;
+            justify-content: center;
+        }
+        &__content
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media (min-width: 768px)
+            {
+            width: 95%;
+            }
+        }
         @include heart
     }
 }
@@ -456,6 +474,10 @@ footer
                 {
                     width: 20%;
                     transform: scale(1);
+                    .fa-check-circle
+                    {
+                        animation: check-rotate 800ms linear;
+                    }
                 }
             }
         }
@@ -470,6 +492,10 @@ footer
                     {
                         width: 20%;
                         transform: scale(1);
+                        .fa-check-circle
+                        {
+                            animation: check-rotate 800ms linear;
+                        }
                     }
                 }
             }

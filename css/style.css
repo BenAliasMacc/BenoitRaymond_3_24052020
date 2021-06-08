@@ -11,6 +11,15 @@
     transform: translateY(0);
   }
 }
+/* Rotation check */
+@keyframes check-rotate {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
 /* Boucle animation menus */
 .card-1 {
   animation: animation-menu 2s ease-in-out both 200ms;
@@ -52,13 +61,21 @@
   animation: animation-menu 2s ease-in-out both 2000ms;
 }
 
-/* backgroung + animation loader-spinner */
+/* background + animation loader-spinner */
 @keyframes loader {
   from {
     opacity: 1;
   }
   to {
     opacity: 0;
+  }
+}
+@keyframes loader-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
   }
 }
 /* Intégration des backgrounds images */
@@ -107,17 +124,19 @@ body {
 
 .loader-spinner {
   position: fixed;
-  top: 0;
-  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 1500px;
   height: 100vh;
   width: 100vw;
   color: white;
   font-size: 2rem;
   background: linear-gradient(#FF79DA, #9356DC);
   animation: loader 4s ease-in-out both;
+}
+.loader-spinner .fa-spinner {
+  animation: loader-spinner 1s ease-in-out 4 both;
 }
 
 .index-content {
@@ -151,7 +170,7 @@ h5 {
   font-size: 1.25rem;
   font-weight: normal;
   text-transform: uppercase;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 
 a {
@@ -162,12 +181,14 @@ a {
 /* HEADER */
 header {
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fa-arrow-left {
   position: relative;
-  top: 41.5px;
-  margin-left: 1rem;
+  right: 2rem;
   font-size: 1.3rem;
 }
 
@@ -213,7 +234,6 @@ header {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 1.5rem;
   box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
-  transform: scale(0.8);
   transition: all 400ms ease-in-out;
 }
 .explorer__contenu__bouton a {
@@ -231,7 +251,6 @@ header {
 .explorer__contenu__bouton:hover {
   background: linear-gradient(#ff88de, #9b63df);
   box-shadow: 0px 6px 6px #0000002e;
-  transform: scale(1);
 }
 
 /* SECTION 3 */
@@ -449,23 +468,36 @@ footer ul li a {
   background-position: center;
   height: 18.75rem;
 }
-.illustration__title {
+.illustration__container {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #f6f6f6;
   font-size: 1.25rem;
   border-radius: 35px 35px 0px 0px;
   padding: 2rem 1rem 0rem 1rem;
 }
-.illustration__title i {
+@media (min-width: 768px) {
+  .illustration__container {
+    display: flex;
+    justify-content: center;
+  }
+}
+.illustration__container__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .illustration__container__content {
+    width: 95%;
+  }
+}
+.illustration__container i {
   background: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px black;
 }
-.illustration__title i:hover {
+.illustration__container i:hover {
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-stroke: 1px transparent;
@@ -530,6 +562,9 @@ footer ul li a {
   width: 20%;
   transform: scale(1);
 }
+.menu__card:active .menu__card__body + .menu__card__body__animation-check .fa-check-circle {
+  animation: check-rotate 800ms linear;
+}
 @media (min-width: 768px) {
   .menu__card:hover .menu__card__body {
     width: 80%;
@@ -537,6 +572,9 @@ footer ul li a {
   .menu__card:hover .menu__card__body + .menu__card__body__animation-check {
     width: 20%;
     transform: scale(1);
+  }
+  .menu__card:hover .menu__card__body + .menu__card__body__animation-check .fa-check-circle {
+    animation: check-rotate 800ms linear;
   }
 }
 .menu__card__body {
@@ -586,7 +624,6 @@ footer ul li a {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 1.5rem;
   box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
-  transform: scale(0.8);
   transition: all 400ms ease-in-out;
 }
 .order__button a {
@@ -604,7 +641,6 @@ footer ul li a {
 .order__button:hover {
   background: linear-gradient(#ff88de, #9b63df);
   box-shadow: 0px 6px 6px #0000002e;
-  transform: scale(1);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -11,7 +11,18 @@
         transform:translateY(0)
     }
 }
-
+/* Rotation check */
+@keyframes check-rotate
+{
+    from 
+    {
+        transform: rotate(0turn);
+    }
+    to 
+    {
+        transform: rotate(1turn);
+    }
+}
 /* Boucle animation menus */
 @for $i from 1 through 10
 {
@@ -20,7 +31,7 @@
         animation: animation-menu 2s ease-in-out both #{$i*200}ms;
     }
 }
-/* backgroung + animation loader-spinner */
+/* background + animation loader-spinner */
 @keyframes loader
 {
     from 
@@ -30,5 +41,16 @@
     to 
     {
         opacity: 0;
+    }
+}
+@keyframes loader-spinner
+{
+    from 
+    {
+        transform: rotate(0turn);
+    }
+    to 
+    {
+        transform: rotate(1turn);
     }
 }
