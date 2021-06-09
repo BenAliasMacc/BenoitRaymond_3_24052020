@@ -91,11 +91,10 @@
   }
 }
 /* Repositionnement images */
-.img-1, .img-3, .img-4 {
+.restaurants .img-1, .restaurants .img-3, .restaurants .img-4 {
   object-position: 0% 100%;
 }
-
-.img-2 {
+.restaurants .img-2 {
   object-position: 0% 63%;
 }
 

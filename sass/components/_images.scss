@@ -1,9 +1,15 @@
 /* Repositionnement images */ 
-.img-1, .img-3, .img-4
+
+
+.restaurants //images index
 {
-    object-position: 0% 100%;
+    .img-1, .img-3, .img-4
+    {
+        object-position: 0% 100%;
+    }
+    .img-2
+    {
+        object-position: 0% 63%;
+    }
 }
-.img-2
-{
-    object-position: 0% 63%;
-}
+
