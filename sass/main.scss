@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import "./utils/variables";
 @import "./utils/keyframes";
-@import "./utils/boucles";
 @import "./components/composants";
+@import "./components/images";
 /* GENERAL */
 * 
 {
@@ -256,32 +256,32 @@ header
     background-color: white;
     border-radius: 15px;
     box-shadow: $box-shadow;
+    overflow: hidden;
     &__image
     {
-        display: flex;
-        justify-content: flex-end;
-        grid-column: span 2;
+        grid-column: 1 / span2;
         grid-row: 1;
         width : 100%;
-        background-size: cover;
-        background-position: center;
-        border-radius: 15px 15px 0px 0px;
-        &__nouveau
-        {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 5rem;
-            height: 1.9rem;
-            font-size: 0.75rem;
-            font-weight: bold;
-            color: #008766;
-            background-color: #99e2d0;
-            border-radius: 2px;
-            position: relative;
-            top: 1rem;
-            right: 0.5rem;
-        }
+        height: 170px;
+        object-fit: cover;
+    }
+    &__nouveau
+    {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: flex-end;
+        width: 5rem;
+        height: 1.9rem;
+        font-size: 0.75rem;
+        font-weight: bold;
+        color: #008766;
+        background-color: #99e2d0;
+        border-radius: 2px;
+        margin-top: 1rem;
+        margin-right: 0.5rem;
     }
     &__heart
     {
@@ -293,35 +293,6 @@ header
         font-size: 1.5rem;
         margin: 1.5rem;
         @include heart
-        /*.fas.fa-heart
-        {
-            background: linear-gradient($primary-color,$secondary-color);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transform: scale(0);
-            transition: transform 500ms ease-in-out;
-            cursor: pointer;
-        }
-        .far.fa-heart:hover + .fas.fa-heart
-        {
-            transform: scale(1);
-        }
-        .far.fa-heart
-        {
-            position: absolute;
-            color: black;
-            transform-origin: bottom;
-            transition: all 0ms 500ms ease-in-out;
-            cursor: pointer;
-            &:hover
-            {
-                color: transparent;
-                + .fas.fa-heart
-                {
-                    transform: scale(1);
-                }
-            }
-        }*/
     }
     &__body
     {
@@ -396,36 +367,48 @@ footer
 /* SECTION 1 */
 .illustration
 {
-    display: flex;
-    align-items: flex-end;
-    background-size: cover;
-    background-position: center;
-    height: 18.75rem;
-    &__container
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 65px;
+    &__image
     {
+        grid-column: 1 / span 2;
         width: 100%;
-        background-color: $background-color;
+        height: 260px;
         font-size: 1.25rem;
-        border-radius: 35px 35px 0px 0px;
-        padding: 2rem 1rem 0rem 1rem;
-        margin-bottom: -1px;
+        object-fit: cover;
         @media (min-width: 768px)
         {
             display: flex;
             justify-content: center;
         }
-        &__content
+    }
+    &__body
+    {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        background-color: $background-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 35px 35px 0px 0px;
+        padding: 1rem 1rem 0rem 1rem;
+        h2 
         {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             @media (min-width: 768px)
             {
-            width: 95%;
+                padding-left: 2.5%;
             }
         }
-        @include heart
+        i 
+        {
+            @media (min-width: 768px)
+            {
+                padding-right: 2.5%;
+            }
+        }
     }
+    @include heart
 }
 /* SECTION 2 */
 .menu
