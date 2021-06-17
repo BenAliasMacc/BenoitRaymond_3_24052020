@@ -208,6 +208,7 @@ header .arrow {
   background-color: #eaeaea;
   padding: 1.2rem 0rem;
   font-weight: bold;
+  color: #4d4d4d;
 }
 .localisation__contenu {
   display: flex;
@@ -228,7 +229,10 @@ header .arrow {
 .explorer__contenu {
   margin: 2.8rem 2rem 3.75rem 2rem;
 }
-.explorer__contenu h3, .explorer__contenu p {
+.explorer__contenu h3 {
+  margin-bottom: 1rem;
+}
+.explorer__contenu p {
   margin-bottom: 1rem;
 }
 .explorer__contenu__bouton {
@@ -462,7 +466,7 @@ footer ul li a {
 }
 
 /*---------------------------------------
----------------------PAGE 2----------------
+---------------------PAGE MENU----------------
 ---------------------------------------------*/
 /* SECTION 1 */
 .illustration {
@@ -567,14 +571,14 @@ footer ul li a {
   margin: 0rem 1rem 1rem 1rem;
   cursor: pointer;
 }
-.menu__card:active .menu__card__body {
+.menu__card:hover .menu__card__body {
   width: 80%;
 }
-.menu__card:active .menu__card__body + .menu__card__body__animation-check {
+.menu__card:hover .menu__card__body + .menu__card__body__animation-check {
   width: 20%;
   transform: scale(1);
 }
-.menu__card:active .menu__card__body + .menu__card__body__animation-check .fa-check-circle {
+.menu__card:hover .menu__card__body + .menu__card__body__animation-check .fa-check-circle {
   animation: check-rotate 800ms linear;
 }
 @media (min-width: 768px) {
