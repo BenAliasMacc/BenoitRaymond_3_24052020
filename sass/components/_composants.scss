@@ -1,74 +1,47 @@
 /* Bouton */
-@mixin bouton 
-{
-    height: 3rem;
-    width: 13.4rem;
-    margin: auto;
-    background: $degraded-color;
-    border-radius: 1.5rem;
-    box-shadow: $box-shadow;
-    transition: all 400ms ease-in-out;
-    a
-    {
-        color: white;
-        height: 100%;
-        width: 100%;
-    }
-    p 
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-    }
-    &:hover
-    {
-        background: linear-gradient(lighten($secondary-color, 3%), lighten($primary-color, 3%));
-        box-shadow: 0px 6px 6px #0000002e;
-    }
+@mixin bouton {
+  height: 3rem;
+  width: 13.4rem;
+  margin: auto;
+  background: $degraded-color;
+  border-radius: 1.5rem;
+  box-shadow: $box-shadow;
+  transition: all 400ms ease-in-out;
+  a {
+    color: white;
+    height: 100%;
+    width: 100%;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  &:hover {
+    background: linear-gradient(
+      to bottom right,
+      lighten($secondary-color, 3%),
+      lighten($primary-color, 3%)
+    );
+    box-shadow: 0px 6px 6px #0000002e;
+  }
 }
 
 /* Coeur + Animation */
-@mixin heart 
-{
-    i
-        {
-            background: transparent;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke: 1px black;
-            &:hover
-            {
-                background: linear-gradient($primary-color,$secondary-color);
-                -webkit-background-clip: text;
-                -webkit-text-stroke: 1px transparent;
-                animation: apparition 1s;
-            }
-        }
-        @keyframes apparition {
-            from 
-            {
-                opacity: 0%;
-            }
-            to 
-            {
-                opacity: 100%;
-            }
-        }
-}
-
-/* animation post chargement */
-@keyframes content-animation
-{
-    from 
-    {
-        opacity: 0;
-        transform: translateX(-300px);
+@mixin heart {
+  i {
+    cursor: pointer;
+    background: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px black;
+    &:hover {
+      background: linear-gradient($primary-color, $secondary-color);
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 1px transparent;
+      animation: remplissage-coeur 1s;
     }
-    to 
-    {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  }
 }
